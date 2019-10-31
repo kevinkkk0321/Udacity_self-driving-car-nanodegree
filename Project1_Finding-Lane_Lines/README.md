@@ -14,10 +14,10 @@ The goals / steps of this project are the following:
 
 First, I calculate the lane line detection drawing (According to y = ax + b formula), and apply it to the pipeline.
 My Pipeline includes five steps:
-1. gray scale
+1. Gray scale
 2. Gaussian Smoothing
 3. Canny
-4. masked
+4. Masked
 5. Hough transform
 
 
