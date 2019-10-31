@@ -12,7 +12,8 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-First, I calculate the lane line detection drawing (According to y = ax + b formula), and apply it to the pipeline.
+First, I calculate the lane line detection drawing (According to y = ax + b formula), and apply it to the following pipeline.
+
 My Pipeline includes five steps:
 1. Gray scale
 2. Gaussian Smoothing
