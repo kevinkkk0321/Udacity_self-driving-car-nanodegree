@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 
 First, I filtered the impossible slope about the lane line.
 
-Second, I calculate the lane line drawing (According to y = ax + b formula)
+Second, I draw the lane line (According to y = ax + b formula)
 
 Third, apply it to the following pipeline.
 
