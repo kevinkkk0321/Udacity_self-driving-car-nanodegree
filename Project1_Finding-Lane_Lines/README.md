@@ -13,7 +13,10 @@ The goals / steps of this project are the following:
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 First, I filtered the impossible slope about the lane line.
-Second, I calculate the lane line drawing (According to y = ax + b formula), and apply it to the following pipeline.
+
+Second, I calculate the lane line drawing (According to y = ax + b formula)
+
+Third, apply it to the following pipeline.
 
 My Pipeline includes five steps:
 1. Gray scale
