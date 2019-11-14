@@ -5,7 +5,7 @@ This project is from [Udacity](https://github.com/udacity/CarND-Advanced-Lane-Li
 In this project, I used computer vision techniques like edge detection, perspective transform, camera calibration ... to detect highway lane informations (e.g. position, curvature ...).
 
 ## The Project
-* Project report in [writeup_report.md](./writeup_report.md)
+* Project report in [writeup_report.md](./writeup_template.md)
 * Video pipeline source code in [P2.ipynb](./P2.ipynb)
 
 ### The result looks like this
