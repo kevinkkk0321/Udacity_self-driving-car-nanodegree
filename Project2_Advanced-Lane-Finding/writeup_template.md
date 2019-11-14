@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 [image3]: ./output_images/undistort.jpg "undistort"
 [image4]: ./output_images/before_Perspective.jpg "before_Perspective"
 [image5]: ./output_images/after_Perspective.jpg "after_Perspective"
-[image6]: ./output_images/screenshot.jpg "Output"
+[image6]: ./output_images/screenshot.png "Output"
 [video1]: ./output_images/project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
