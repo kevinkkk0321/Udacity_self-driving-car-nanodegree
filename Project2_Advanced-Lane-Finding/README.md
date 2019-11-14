@@ -9,8 +9,7 @@ In this project, I used computer vision techniques like edge detection, perspect
 * Video pipeline source code in [P2.ipynb](./P2.ipynb)
 
 ### The result looks like this
-[image6]: ./output_images/screenshot.png "Output"
-![alt text][image1]
+[result screenshot](./output_images/screenshot.png "Output")
 View the whole video in [my video result](./output_images/project_video_result.mp4)
 
 ### More detail
