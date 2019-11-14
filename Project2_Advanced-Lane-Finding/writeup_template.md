@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/chessboard_original.png "chessboard Original"
+[image1]: ./output_images/chessboard_original.jpg "chessboard Original"
 [image2]: ./output_images/chessboard_undistort.jpg "chessboard Undistorted"
 [image3]: ./output_images/undistort.jpg "undistort"
 [image4]: ./output_images/before_Perspective.jpg "before_Perspective"
