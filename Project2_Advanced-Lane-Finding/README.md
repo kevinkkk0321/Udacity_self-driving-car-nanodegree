@@ -14,4 +14,4 @@ View the whole video in [my video result](./output_images/project_video_result.m
 
 ### More detail
 
-For more informations please reference [writeup_report.md](./writeup_template.md).
+For more informations please reference [writeup_report.md](./writeup_template.md)
