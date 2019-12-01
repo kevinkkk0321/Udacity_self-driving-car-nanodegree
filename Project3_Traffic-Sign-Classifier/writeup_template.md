@@ -24,11 +24,7 @@ The goals / steps of this project are the following:
 [image5]: ./image_record/image5.png 
 [image6]: ./image_record/image6.png 
 
-[image7]: ./web_images/No_entry_17.jpg 
-[image8]: ./web_images/Road_work_25.jpg 
-[image9]: ./web_images/Speed_limit_1.jpg 
-[image10]: ./web_images/Stop_14.jpg 
-[image11]: ./web_images/Turn_right_ahead_33.jpg 
+[image7]: ./web_images/images.png
 
 
 ## Rubric Points
@@ -82,13 +78,18 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution 3x3     	| 1x1 stride, valid padding, outputs 28x28x6 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
+| Max pooling	      	| 2x2 stride, outputs 14x14x6 				|
+| Convolution 3x3     	| 1x1 stride, valid padding, outputs 10x10x16 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride, outputs 5x5x16				|
+| Flatten		| 5x5x16 -> 400						|
+| Fully connected		| 400 -> 120				|
+| RELU					|				
+| Fully connected		| 120 -> 84    	|
+| RELU					|				
+| Fully connected		| 84 -> 43						|
 |						|												|
  
 
@@ -119,8 +120,7 @@ Maybe I could add more dropout or L2 regularization in the model to sharp the ac
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image7] ![alt text][image8] ![alt text][image9] 
-![alt text][image10] ![alt text][image11]
+![alt text][image7] 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -128,11 +128,11 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
+| No_entry      		| No_entry   									| 
+| Road_work     			| Road_work 										|
 | Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Stop	      		| Stop				 				|
+| Turn_right_ahead			| Turn_right_ahead      							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
