@@ -96,9 +96,9 @@ My final model consisted of the following layers:
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I use the hyperparameters as follow:
-EPOCHS = 80
-BATCH_SIZE = 128 
-learning_rate = 0.0006
+* EPOCHS = 80
+* BATCH_SIZE = 128 
+* learning_rate = 0.0006
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
