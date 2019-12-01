@@ -17,12 +17,19 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./image_record/image1.jpg 
-[image2]: ./image_record/image2.jpg 
-[image3]: ./image_record/image3.jpg 
+[image1]: ./image_record/image1.png 
+[image2]: ./image_record/image2.png 
+[image3]: ./image_record/image3.png 
 [image4]: ./image_record/image4.png 
 [image5]: ./image_record/image5.png 
 [image6]: ./image_record/image6.png 
+
+[image7]: ./image_record/No_entry_17.jpg 
+[image8]: ./image_record/Road_work_25.jpg 
+[image9]: ./image_record/Speed_limit_1.jpg 
+[image10]: ./image_record/Stop_14.jpg 
+[image11]: ./image_record/Turn_right_ahead_33.jpg 
+
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -125,8 +132,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image7] ![alt text][image8] ![alt text][image9] 
+![alt text][image10] ![alt text][image11]
 
 The first image might be difficult to classify because ...
 
