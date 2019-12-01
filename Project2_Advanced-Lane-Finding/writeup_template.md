@@ -4,8 +4,6 @@
 
 ---
 
-**Advanced Lane Finding Project**
-
 The goals / steps of this project are the following:
 
 * Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
