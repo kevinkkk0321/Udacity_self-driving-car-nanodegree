@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 [image5]: ./image_record/image5.png 
 [image6]: ./image_record/image6.png 
 
-[image7]: ./web_images/No_entry_17.jpg width="200" height="400"
+[image7]: <img src="./web_images/No_entry_17.jpg" height="24" width="48">
 [image8]: ./web_images/Road_work_25.jpg 
 [image9]: ./web_images/Speed_limit_1.jpg 
 [image10]: ./web_images/Stop_14.jpg 
