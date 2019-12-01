@@ -24,11 +24,11 @@ The goals / steps of this project are the following:
 [image5]: ./image_record/image5.png 
 [image6]: ./image_record/image6.png 
 
-[image7]: ./image_record/No_entry_17.jpg 
-[image8]: ./image_record/Road_work_25.jpg 
-[image9]: ./image_record/Speed_limit_1.jpg 
-[image10]: ./image_record/Stop_14.jpg 
-[image11]: ./image_record/Turn_right_ahead_33.jpg 
+[image7]: ./web_images/No_entry_17.jpg 
+[image8]: ./web_images/Road_work_25.jpg 
+[image9]: ./web_images/Speed_limit_1.jpg 
+[image10]: ./web_images/Stop_14.jpg 
+[image11]: ./web_images/Turn_right_ahead_33.jpg 
 
 
 ## Rubric Points
