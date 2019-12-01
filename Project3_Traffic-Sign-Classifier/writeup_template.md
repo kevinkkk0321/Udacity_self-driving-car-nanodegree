@@ -17,12 +17,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./image_record/image1.jpg "Visualization"
-[image2]: ./image_record/image2.jpg "Grayscaling"
-[image3]: ./image_record/image3.jpg "Random Noise"
-[image4]: ./image_record/image4.png "Traffic Sign 1"
-[image5]: ./image_record/image5.png "Traffic Sign 2"
-[image6]: ./image_record/image6.png "Traffic Sign 3"
+[image1]: ./image_record/image1.jpg 
+[image2]: ./image_record/image2.jpg 
+[image3]: ./image_record/image3.jpg 
+[image4]: ./image_record/image4.png 
+[image5]: ./image_record/image5.png 
+[image6]: ./image_record/image6.png 
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -52,6 +52,7 @@ signs data set:
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
 ![alt text][image1]
+![alt text][image2]
 
 ### Design and Test a Model Architecture
 
