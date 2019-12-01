@@ -24,11 +24,7 @@ The goals / steps of this project are the following:
 [image5]: ./image_record/image5.png 
 [image6]: ./image_record/image6.png 
 
-[image7]: <img src="./web_images/No_entry_17.jpg" height="24" width="48">
-[image8]: ./web_images/Road_work_25.jpg 
-[image9]: ./web_images/Speed_limit_1.jpg 
-[image10]: ./web_images/Stop_14.jpg 
-[image11]: ./web_images/Turn_right_ahead_33.jpg 
+[image7]: ./web_images/images.png
 
 
 ## Rubric Points
@@ -124,8 +120,7 @@ Maybe I could add more dropout or L2 regularization in the model to sharp the ac
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image7] ![alt text][image8] ![alt text][image9] 
-![alt text][image10] ![alt text][image11]
+![alt text][image7] 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
