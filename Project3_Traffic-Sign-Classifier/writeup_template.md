@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 [image5]: ./image_record/image5.png 
 [image6]: ./image_record/image6.png 
 
-[image7]: ./web_images/No_entry_17.jpg 
+[image7]: (./web_images/No_entry_17.jpg =250x250)
 [image8]: ./web_images/Road_work_25.jpg 
 [image9]: ./web_images/Speed_limit_1.jpg 
 [image10]: ./web_images/Stop_14.jpg 
@@ -133,11 +133,11 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
+| No_entry      		| No_entry   									| 
+| Road_work     			| Road_work 										|
 | Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Stop	      		| Stop				 				|
+| Turn_right_ahead			| Turn_right_ahead      							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
