@@ -19,4 +19,6 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 ### Result
-Build a Traffic Sign Recognition which has the accuracy up to 93%
+Build a Traffic Sign Recognition which has the accuracy up to 94% in validation set
+
+For more information, please reference to [Writeup Template](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/blob/master/Project3_Traffic-Sign-Classifier/writeup_template.md)
