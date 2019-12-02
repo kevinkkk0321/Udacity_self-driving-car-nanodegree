@@ -112,12 +112,9 @@ To train the model, I use the hyperparameters as follow:
 My final model results were:
 | Set			        |     accuracy	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Training set		      | 80				       |
-| Validation set					 |	128			       |
-| Test	set          	 | 0.0006	      |
-* training set accuracy of 0.0.991
-* validation set accuracy of 0.939 
-* test set accuracy of 0.910
+| Training set		      | 0.991				       |
+| Validation set					 |	0.939 			       |
+| Test	set          	 | 0.	      |
 
 
 If a well known architecture was chosen:
