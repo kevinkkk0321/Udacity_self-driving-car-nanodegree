@@ -100,9 +100,11 @@ My final model consisted of the following layers:
 
 To train the model, I use the hyperparameters as follow:
 
-| EPOCHS		       | 80				|
-| BATCH_SIZE					|	128			 |
-| learning_rate		| 0.0006	|
+| hyperparameter			        |     Value	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| EPOCHS		        | 80				       |
+| BATCH_SIZE					 |	128			       |
+| learning_rate		 | 0.0006	      |
 |						|												|
 
 
