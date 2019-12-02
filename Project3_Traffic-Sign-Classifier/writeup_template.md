@@ -120,8 +120,11 @@ My final model results were:
 
 If a well known architecture was chosen:
 * What architecture was chosen? LeNet
+
 First, implement regularization to regularize the images. 
+
 Second, tune the learning rate lower (0.0006) and add more epochs (80) for higher accuracy rate. 
+
 Third, base on the LeNet model, I added two dropout layer in it in order to avoid overfitting.
 
 ### Test a Model on New Images
