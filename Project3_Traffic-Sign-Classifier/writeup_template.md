@@ -59,13 +59,14 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 ![alt text][image2]
 
 ### Design and Test a Model Architecture
-
+esize/rotate/warp
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 In order to augment my images, and add more data to the the data set, I used the following techniques:  
 resize/rotate/warp 
 
 Here is an example of an original image and an augmented image:
+
 #origianal image
 ![alt text][image3]
 #augmented image
@@ -84,35 +85,41 @@ My final model consisted of the following layers:
 | Convolution 3x3     	| 1x1 stride, valid padding, outputs 10x10x16 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride, outputs 5x5x16				|
-| Flatten		| 5x5x16 -> 400						|
+| Flatten		| 5x5x16 -> 400						   |
+| Dropout		| keep_prob = 0.8						 |
 | Fully connected		| 400 -> 120				|
 | RELU					|				
+| Dropout		| keep_prob = 0.75					 |
 | Fully connected		| 120 -> 84    	|
 | RELU					|				
 | Fully connected		| 84 -> 43						|
-|						|												|
  
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I use the hyperparameters as follow:
-* EPOCHS = 80
-* BATCH_SIZE = 128 
-* learning_rate = 0.0006
+
+| hyperparameter			        |     Value	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| EPOCHS		        | 80				       |
+| BATCH_SIZE					 |	128			       |
+| learning_rate		 | 0.0006	      |
+
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 0.999
-* validation set accuracy of 0.915 
-* test set accuracy of 0.910
+| Set			        |     accuracy	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Training set		      | 0.991				       |
+| Validation set					 |	0.939 			       |
+| Test	set          	 | 0.	      |
 
 
 If a well known architecture was chosen:
 * What architecture was chosen? LeNet
-I didn't use specific regularization, just tune the learning rate lower and add more epochs for higher accuracy rate.
-Maybe I could add more dropout or L2 regularization in the model to sharp the accuracy after I finish the whole course.
+First, implement regularization to regularize the images. Second, tune the learning rate lower (0.0006) and add more epochs (80) for higher accuracy rate. Third, in the training LeNet model, I added two dropout layer to avoid overfitting.
 
 ### Test a Model on New Images
 
