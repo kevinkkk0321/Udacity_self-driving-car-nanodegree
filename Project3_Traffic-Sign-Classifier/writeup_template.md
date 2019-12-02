@@ -143,19 +143,21 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | No_entry      		| No_entry   									| 
 | Road_work     			| Road_work 										|
-| Speed limit (30km/h)				| Yield											|
-| Stop	      		| Stop				 				|
-| Turn_right_ahead			| Roundabout mandatory      							|
+| Speed limit (30km/h)				| Stop											|
+| Stop	      		| No entry				 				|
+| Turn_right_ahead			| Keep right      							|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. 
-I think it's the image I collect from web(which are big) were distorted after resize, causing the predict accuracy only got 60%.
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 40%. 
+I think it's the image I collect from web(which are big, not like the images in the dataset) were distorted after resize, causing the predict accuracy only got 40%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the cell "Predict the Sign Type for Each Image".
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+To sum up, the accuracy aren't good, but I'm not sure why the model is all 100% sure for its prediction, instead of different percentages between multiple images.
+
+For the first image, the model is sure that this is a No entry sign, and it's correct. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -165,7 +167,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | .00	      	| Speed limit (20km/h)		 				|
 | 1.0 			    | No entry     							|
 
-For the second image:
+For the second image, the model is sure that this is a Road work sign, and also correct.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:|
@@ -175,7 +177,7 @@ For the second image:
 | .00        | Bicycles crossing   									| 
 | 1.0 			    | Road work     							|
 
-For the third one,
+For the third one, the model is sure that this is a Stop sign, but it's a Speed limit (30km/h) sign.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:|
@@ -186,7 +188,7 @@ For the third one,
 | 1.0 			    | Stop     							|
 
 
-For the fourth,
+For the fourth, the model is sure that this is a No entry sign, but it's a stop sign.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -197,7 +199,7 @@ For the fourth,
 | 1.0 			    | No entry     							|
 
 
-For the fifth,
+For the fifth, the model is sure that this is a Keep right sign, and it's a turn right ahead sign.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
