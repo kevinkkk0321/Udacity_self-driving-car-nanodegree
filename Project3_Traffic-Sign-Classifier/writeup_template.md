@@ -109,14 +109,20 @@ To train the model, I use the hyperparameters as follow:
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 0.999
-* validation set accuracy of 0.915 
+| Set			        |     accuracy	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Training set		      | 80				       |
+| Validation set					 |	128			       |
+| Test	set          	 | 0.0006	      |
+* training set accuracy of 0.0.991
+* validation set accuracy of 0.939 
 * test set accuracy of 0.910
 
 
 If a well known architecture was chosen:
 * What architecture was chosen? LeNet
-First, implement regularization to regularize the images. Second, tune the learning rate lower(0.0006) and add more epochs(80) for higher accuracy rate.
+First, as for image data, I use a dice to randomly choose the 
+First, implement regularization to regularize the images. Second, tune the learning rate lower (0.0006) and add more epochs (80) for higher accuracy rate. Third, in the training LeNet model, I added two dropout layer to avoid overfitting.
 
 ### Test a Model on New Images
 
