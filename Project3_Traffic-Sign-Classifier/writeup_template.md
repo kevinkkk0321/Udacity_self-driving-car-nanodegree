@@ -113,9 +113,9 @@ My final model results were:
 
 | Set			        |     accuracy	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Training set		      | 0.992				       |
-| Validation set					 |	0.937			        |
-| Test	set          	 | 0.	             |
+| Training set		      | 0.989				       |
+| Validation set					 |	0.940			        |
+| Test	set          	 | 0.915           |
 
 
 If a well known architecture was chosen:
@@ -143,12 +143,13 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | No_entry      		| No_entry   									| 
 | Road_work     			| Road_work 										|
-| Yield					| Yield											|
+| Speed limit (30km/h)				| Yield											|
 | Stop	      		| Stop				 				|
-| Turn_right_ahead			| Turn_right_ahead      							|
+| Turn_right_ahead			| Roundabout mandatory      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. 
+I think it's the image I collect from web(which are big) were distorted after resize, causing the predict accuracy only got 60%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -158,53 +159,53 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .00        | Speed limit (60km/h)   									| 
+| .00     			| Speed limit (50/h) 										|
+| .00					   | Speed limit (30km/h)											|
+| .00	      	| Speed limit (20km/h)		 				|
+| 1.0 			    | No entry     							|
 
 For the second image:
 
 | Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+|:---------------------:|:---------------------------------------------:|
+| .00     			| Speed limit (50/h) 										|
+| .00					   | Speed limit (30km/h)											|
+| .00	      	| Speed limit (20km/h)		 				|
+| .00        | Bicycles crossing   									| 
+| 1.0 			    | Road work     							|
 
 For the third one,
 
 | Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+|:---------------------:|:---------------------------------------------:|
+| .00	      	| Speed limit (20km/h)		 				|
+| .00        | Speed limit (80km/h)   									| 
+| .00     			| Priority road     									|
+| .00					   | Speed limit (30km/h)											|
+| 1.0 			    | Stop     							|
 
 
 For the fourth,
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .00        | Speed limit (60km/h)   									| 
+| .00     			| Speed limit (50/h) 										|
+| .00					   | Speed limit (30km/h)											|
+| .00	      	| Speed limit (20km/h)		 				|
+| 1.0 			    | No entry     							|
 
 
 For the fifth,
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .00     			| Speed limit (50/h) 										|
+| .00					   | Speed limit (30km/h)											|
+| .00	      	| Speed limit (20km/h)		 				|
+| .00        | Turn right ahead   									| 
+| 1.0 			    | Keep right     							|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
