@@ -62,7 +62,11 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-In order to augment my images, and add more data to the the data set, I Randomly choose the following techniques:  
+I normalized all vectors to the same scale (-1.0~1.0) since its RGB pixels, in order to increase the speed of opimizer and also avoid training biased. 
+
+I augmented the data sets which have less than 500 samples to avoid my network biased by probability of occurance between different classes.
+
+In order to augment my images and add more data to the the data set, I Randomly choose the following techniques:  
 1. Resize 50% / 2. Rotate -30~30 degree / 3. Warp 
 
 Here is an example of an original image and an augmented image:
@@ -114,7 +118,7 @@ My final model results were:
 | Set			        |     accuracy	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Training set		      | 0.989				       |
-| Validation set					 |	0.940			        |
+| Validation set					 |	0.933		        |
 | Test	set          	 | 0.915           |
 
 
@@ -127,11 +131,21 @@ Second, tune the learning rate lower (0.0006) and add more epochs (80) for highe
 
 Third, base on the LeNet model, I added two dropout layer in it in order to avoid overfitting.
 
+Fourth, I choose Adam optimizer to optimize the model for better accuracy in model prediction.
+
 ### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are five German traffic signs that I found on the web, which have different qualities as follow:
+
+| Image			        |     Origin image shape	        					| 
+|:---------------------:|:---------------------------------------------:| 
+|No_entry_17.jpg | (480, 640, 3) |
+|Road_work_25.jpg | (450, 600, 3) | 
+|General_caution_18.png | (216, 216, 3) |
+|stop_14.png | (1065, 1065, 3) |
+|bumpy_square_22.png | (120, 120, 3) |
 
 ![alt text][image7] 
 
@@ -141,15 +155,15 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| No_entry      		| No_entry   									| 
-| Road_work     			| Road_work 										|
-| Speed limit (30km/h)				| Stop											|
-| Stop	      		| No entry				 				|
-| Turn_right_ahead			| Keep right      							|
+| No entry      		| No entry   									| 
+| Road work     			| Road work 										|
+| Bumpy square				| Bumpy square											|
+| Stop	      		| End of no passing by vehicles over 3.5 metric tons			 				|
+| General caution			| General caution	     							|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 40%. 
-I think it's the image I collect from web(which are big, not like the images in the dataset) were distorted after resize, causing the predict accuracy only got 40%.
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
+I think the failed-predict image is due to it's size is big, not like the images in the dataset. Which cause the error prediction.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
