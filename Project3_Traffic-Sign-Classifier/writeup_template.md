@@ -53,6 +53,7 @@ signs data set:
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+
 #origianal data
 ![alt text][image1]
 #augmented data
