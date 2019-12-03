@@ -165,13 +165,13 @@ Here are the results of the prediction:
 | General caution			| General caution	     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. The Stop sign image was predicted wrong, which was same as I guess. I think the failed-predict image is due to it's size is big, not like the images in the dataset. Which cause the wrong prediction.
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. The Stop sign image was predicted wrong, which was same as my guess. I think the failed-predict image is due to it's size is big, not like the images in the dataset. Which cause the wrong prediction.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the cell "Predict the Sign Type for Each Image".
+The code for making predictions on my final model is located in the cell "Step 3: Test a Model on New Images".
 
-For the first image, the model is sure that this is a No entry sign, and it's correct. The top five soft max probabilities were
+For the first image, the model is sure that this is a No entry sign, and it's correct. 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -191,7 +191,7 @@ For the second image, the model is sure that this is a Road work sign, and also 
 | .00        | Bicycles crossing   									| 
 | 1.0 			    | Road work     							|
 
-For the third one, the model is sure that this is a Stop sign, but it's a Speed limit (30km/h) sign.
+For the third one, the model is sure that this is a General caution sign, and also correct.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:|
@@ -202,7 +202,7 @@ For the third one, the model is sure that this is a Stop sign, but it's a Speed 
 | 1.0 			    | General caution     							|
 
 
-For the fourth, the model is sure that this is a No entry sign, but it's a stop sign.
+For the fourth, the model is sure that this is a End of no passing by vehicles over 3.5 metric tons sign, but it's a stop sign instead.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -213,7 +213,7 @@ For the fourth, the model is sure that this is a No entry sign, but it's a stop 
 | 1.0 			    | End of no passing by vehicles over 3.5 metric tons     							|
 
 
-For the fifth, the model is sure that this is a Keep right sign, and it's a turn right ahead sign.
+For the fifth, the model is sure that this is a Bumpy road sign, and also correct.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
