@@ -171,8 +171,6 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the cell "Predict the Sign Type for Each Image".
 
-To sum up, the accuracy aren't good, but I'm not sure why the model is all 100% sure for its prediction, instead of different percentages between multiple images.
-
 For the first image, the model is sure that this is a No entry sign, and it's correct. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
@@ -197,14 +195,25 @@ For the third one, the model is sure that this is a Stop sign, but it's a Speed 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:|
-| .00	      	| Speed limit (20km/h)		 				|
-| .00        | Speed limit (80km/h)   									| 
-| .00     			| Priority road     									|
+| .00        | Speed limit (60km/h)   									| 
+| .00     			| Speed limit (50/h) 										|
 | .00					   | Speed limit (30km/h)											|
-| 1.0 			    | Stop     							|
+| .00	      	| Speed limit (20km/h)		 				|
+| 1.0 			    | General caution     							|
 
 
 For the fourth, the model is sure that this is a No entry sign, but it's a stop sign.
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .00     			| Speed limit (50/h) 										|
+| .00					   | Speed limit (30km/h)											|
+| .00	      	| Speed limit (20km/h)		 				|
+| .00	      	| No entry		 				|
+| 1.0 			    | End of no passing by vehicles over 3.5 metric tons     							|
+
+
+For the fifth, the model is sure that this is a Keep right sign, and it's a turn right ahead sign.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -212,18 +221,7 @@ For the fourth, the model is sure that this is a No entry sign, but it's a stop 
 | .00     			| Speed limit (50/h) 										|
 | .00					   | Speed limit (30km/h)											|
 | .00	      	| Speed limit (20km/h)		 				|
-| 1.0 			    | No entry     							|
-
-
-For the fifth, the model is sure that this is a Keep right sign, and it's a turn right ahead sign.
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .00     			| Speed limit (50/h) 										|
-| .00					   | Speed limit (30km/h)											|
-| .00	      	| Speed limit (20km/h)		 				|
-| .00        | Turn right ahead   									| 
-| 1.0 			    | Keep right     							|
+| 1.0 			    | Bumpy road     							|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
