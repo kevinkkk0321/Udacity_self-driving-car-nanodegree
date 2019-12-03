@@ -119,7 +119,7 @@ My final model results were:
 |:---------------------:|:---------------------------------------------:| 
 | Training set		      | 0.989				       |
 | Validation set					 |	0.933		        |
-| Test	set          	 | 0.915           |
+| Test	set          	 | 0.911           |
 
 
 If a well known architecture was chosen:
@@ -149,6 +149,9 @@ Here are five German traffic signs that I found on the web, which have different
 
 ![alt text][image7] 
 
+Before predicting, I notice stop_14.png is larger than others, which may cause error in prediction.
+
+
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
@@ -162,8 +165,7 @@ Here are the results of the prediction:
 | General caution			| General caution	     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
-I think the failed-predict image is due to it's size is big, not like the images in the dataset. Which cause the error prediction.
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. The Stop sign image was predicted wrong, which was same as I guess. I think the failed-predict image is due to it's size is big, not like the images in the dataset. Which cause the wrong prediction.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
