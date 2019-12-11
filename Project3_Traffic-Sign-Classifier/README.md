@@ -1,5 +1,5 @@
 # Build a Traffic Sign Recognition Program
-This project is from Udacity, which it is the third project of the Self-Driving Car NanoDegree course.
+This project is from [Udacity](https://www.udacity.com/), which is the third project of the [Self-Driving Car NanoDegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) course.
 
 Overview
 ---
