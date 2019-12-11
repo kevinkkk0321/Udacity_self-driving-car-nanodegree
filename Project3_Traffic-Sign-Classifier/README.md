@@ -18,7 +18,8 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-### Result
+Result
+---
 Build a Traffic Sign Recognition which has the accuracy up to 93% in validation set and 91% in test set
 
 For project detail, please link to [Writeup Template](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/blob/master/Project3_Traffic-Sign-Classifier/writeup_template.md)
