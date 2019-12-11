@@ -1,4 +1,4 @@
-## Project: Build a Traffic Sign Recognition Program
+# Project: Build a Traffic Sign Recognition Program
 This project is from Udacity, which it is the third project of the Self-Driving Car NanoDegree course.
 
 Overview
