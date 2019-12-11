@@ -1,5 +1,5 @@
 # Advanced Lane Finding
-This project is from [Udacity](https://github.com/udacity/CarND-Advanced-Lane-Lines), which is the second project of the [Self-Driving Car NanoDegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) course.
+This project is from [Udacity](https://www.udacity.com/), which is the second project of the [Self-Driving Car NanoDegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) course.
 
 ## Overview
 In this project, I used computer vision techniques like edge detection, perspective transform, camera calibration ... to detect highway lane informations (e.g. position, curvature ...).
