@@ -2,7 +2,7 @@
 
 Udacity's Self-Driving Car Nanodegree project files
 
-Start to take this self-driving nanodegree online course since 10/25, 2019
+Start this Udacity self-driving car nanodegree course since 10/25, 2019
 
 
 
