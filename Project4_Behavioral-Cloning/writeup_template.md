@@ -130,14 +130,15 @@ Then I repeated this process on track two in order to get more data points.
 
 To augment the data sat, I also flipped images and angles thinking that this would help generalize the model. For example, here is an image that has then been flipped:
 
-![alt text][image5]
-![alt text][image6]
+![center][image1]  ![alt text][image5]
 
 In my training process, my car always drive out the lane in a specific turn, so I add more training images of that turn, as below:
 
 ![alt text][image7]
 
 After the collection process, I had 32187 number of data points. I then preprocessed this data by cropping irrelevant data from the top of the image. This led to a final image size of 80 x 320 x 3.
+
+![center][image6] 
 
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
