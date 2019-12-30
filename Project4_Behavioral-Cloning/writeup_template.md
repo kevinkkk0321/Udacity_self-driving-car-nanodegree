@@ -1,7 +1,6 @@
 # **Behavioral Cloning** 
 
 ## Writeup Template
----
 
 **Behavioral Cloning Project**
 
