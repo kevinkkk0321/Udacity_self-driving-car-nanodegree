@@ -50,25 +50,25 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-The model architecture I used was inspired from a similar network employed by NVIDIA team for steering control of an autonomous vehicle. This model works well due to its 5 convolutional layers structure and documented success of the network for steering control, and base on the architecture I add a little dropout layer to reduce overfitting. 
+The model architecture I used was inspired from a similar network employed by NVIDIA team for steering control of an autonomous vehicle. 
 
-The final step was to run the simulator to see how well the car was driving around the track. There were a few spots where the vehicle fell off the track on increasing the set speed in drive.py file. To improve the driving behavior in these cases, I augmented the training data of the specific turns.
+The final goal was to run the simulator to see how well the car was driving around the track. There were a few spots where the vehicle fell off the track. In order to improve the driving behavior in these cases, I augmented the training data of the specific turns.
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting.
+The model contains dropout layers in order to reduce overfitting. (model.py line 102)
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 113).
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
+Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road 
 
 For details about how I created the training data, see the next section. 
 
@@ -128,12 +128,12 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data sat, I also flipped images and angles thinking that this would help generalize the model. For example, here is an image that has then been flipped:
 
 ![alt text][image5]
 ![alt text][image6]
 
-In my training process, my car always drive out the lane in a specific turn, so I add more training images of that turn, as below
+In my training process, my car always drive out the lane in a specific turn, so I add more training images of that turn, as below:
 
 ![alt text][image7]
 
