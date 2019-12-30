@@ -51,13 +51,15 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
+The model architecture I used was inspired from a similar network employed by NVIDIA team for steering control of an autonomous vehicle. This model works well due to its 5 convolutional layers structure and documented success of the network for steering control, and base on the architecture I add a little dropout layer to reduce overfitting. 
 
-The model includes RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
+The final step was to run the simulator to see how well the car was driving around the track. There were a few spots where the vehicle fell off the track on increasing the set speed in drive.py file. To improve the driving behavior in these cases, I augmented the training data of the specific turns.
+
+At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 21). 
+The model contains dropout layers in order to reduce overfitting.
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
@@ -91,16 +93,17 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture consisted of 4 convolution neural network as following architecture.
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+Here is a visualization of the architecture
 
 
 | Layer                            |    Size       |
 | --------------------             |:-------------:|
-| Input                            | 65 x 320 x 3  |
-| Lambda (normalization)           | 65 x 320 x 3  |
+| Input                            | 160 x 320 x 3  |
+| Lambda (normalization)           | 80 x 320 x 3  |
 | Convolution with relu activation | 5 x 5 x 24 with 2x2 filters  |
+| Dropout                          | 0.5  |
 | Convolution with relu activation | 5 x 5 x 36 with 2x2 filters  |
 | Convolution with relu activation | 5 x 5 x 48 with 2x2 filters  |
 | Convolution with relu activation | 3 x 3 x 64   |
@@ -115,7 +118,6 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 #### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
-
 
 ![alt text][image1]
 
@@ -136,7 +138,7 @@ In my training process, my car always drive out the lane in a specific turn, so 
 
 ![alt text][image7]
 
-After the collection process, I had 32187 number of data points. I then preprocessed this data by cropping irrelevant data from the top of the image. This led to a final image size of 160 x 320 x 3.
+After the collection process, I had 32187 number of data points. I then preprocessed this data by cropping irrelevant data from the top of the image. This led to a final image size of 80 x 320 x 3.
 
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
