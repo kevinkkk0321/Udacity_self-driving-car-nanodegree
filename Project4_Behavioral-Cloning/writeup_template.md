@@ -15,13 +15,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image1]: ./train_images/Fig1.jpg "center"
+[image2]: ./train_images/Fig2.jpg "right"
+[image3]: ./train_images/Fig3.jpg "mid"
+[image4]: ./train_images/Fig4.jpg "center"
+[image5]: ./train_images/Fig5.jpg "flipped"
+[image6]: ./train_images/Fig6.jpg "cropped"
+[image7]: ./train_images/Fig7.png "special_turn"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -53,7 +53,22 @@ The model.py file contains the code for training and saving the convolution neur
 
 My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 18). 
+The model includes RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
+
+| Layer                            |    Size       |
+| --------------------             |:-------------:|
+| Input                            | 65 x 320 x 3  |
+| Lambda (normalization)           | 65 x 320 x 3  |
+| Convolution with relu activation | 5 x 5 x 24 with 2x2 filters  |
+| Convolution with relu activation | 5 x 5 x 36 with 2x2 filters  |
+| Convolution with relu activation | 5 x 5 x 48 with 2x2 filters  |
+| Convolution with relu activation | 3 x 3 x 64   |
+| Convolution with relu activation | 3 x 3 x 64   |
+| Flatten                          |              |
+| Fully connected                  | 100          |
+| Fully connected                  | 50          |
+| Fully connected                  | 10          |
+| Output                           | 1          |
 
 #### 2. Attempts to reduce overfitting in the model
 
@@ -118,7 +133,8 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 
 Etc ....
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+After the collection process, I had 32187 number of data points. I then preprocessed this data by cropping irrelevant data from the top of the image. This led to a final image size of 160 x 320 x 3.
+
 
 
 I finally randomly shuffled the data set and put Y% of the data into a validation set. 
