@@ -131,4 +131,6 @@ After the collection process, I had 32187 number of data points. I then preproce
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 since the loss didn't decrease much after that. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 since the loss didn't decrease much after that. I used an adam optimizer so that manually training the learning rate wasn't necessary. 
+
+For the final video: [project4_video](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/blob/master/Project4_Behavioral-Cloning/run1.mp4)
