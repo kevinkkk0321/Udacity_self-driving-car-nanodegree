@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [image4]: ./train_images/Fig4.jpg "center"
 [image5]: ./train_images/Fig5.jpg "flipped"
 [image6]: ./train_images/Fig6.jpg "cropped"
-[image7]: ./train_images/Fig7.png "special_turn"
+[image7]: ./train_images/Fig7.jpg "special_turn"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -50,11 +50,9 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-The model architecture I used was inspired from a similar network employed by NVIDIA team for steering control of an autonomous vehicle. 
+My model consists of a convolution neural network with 2x2 filter sizes and depths between 24 and 64 (model.py lines 86-90).
 
-The final goal was to run the simulator to see how well the car was driving around the track. There were a few spots where the vehicle fell off the track. In order to improve the driving behavior in these cases, I augmented the training data of the specific turns.
-
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+The model includes RELU layers to introduce nonlinearity (code lines 86-90), and the data is normalized in the model using a Keras lambda layer (code line 85). 
 
 #### 2. Attempts to reduce overfitting in the model
 
@@ -76,19 +74,12 @@ For details about how I created the training data, see the next section.
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
+The model architecture I used was inspired from a similar network employed by NVIDIA team for steering control of an autonomous vehicle. 
 
-My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
-
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
-
-To combat the overfitting, I modified the model so that ...
-
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
+The final goal was to run the simulator to see how well the car was driving around the track. There were a few spots where the vehicle fell off the track. In order to improve the driving behavior in these cases, I augmented the training data of the specific turns and train it. And the car finally stays on the track! 
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+
 
 #### 2. Final Model Architecture
 
@@ -137,9 +128,6 @@ In my training process, my car always drive out the lane in a specific turn, so 
 ![alt text][image7]
 
 After the collection process, I had 32187 number of data points. I then preprocessed this data by cropping irrelevant data from the top of the image. This led to a final image size of 80 x 320 x 3.
-
-![center][image6] 
-
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
