@@ -50,9 +50,9 @@ The model.py file contains the code for training and saving the convolution neur
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 2x2 filter sizes and depths between 24 and 64 (model.py lines 86-90).
+My model consists of a convolution neural network with 2x2 filter sizes and depths between 24 and 64 (model.py lines 101-106).
 
-The model includes RELU layers to introduce nonlinearity (code lines 86-90), and the data is normalized in the model using a Keras lambda layer (code line 85). 
+The model includes RELU layers to introduce nonlinearity (code lines 101-106), and the data is normalized in the model using a Keras lambda layer (code line 100). 
 
 #### 2. Attempts to reduce overfitting in the model
 
