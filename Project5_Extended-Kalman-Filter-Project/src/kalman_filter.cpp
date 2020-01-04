@@ -26,16 +26,30 @@ void KalmanFilter::Predict() {
   /**
    * TODO: predict the state
    */
+    x_ = F_ * x_'; // + u;
+    P_ = F_ * P * F_.transpose + Q_;
 }
 
 void KalmanFilter::Update(const VectorXd &z) {
   /**
    * TODO: update the state by using Kalman Filter equations
    */
+    MatrixXd H_trans = H_.transpose();
+    MatrixXd P_trans = P_.transpose();
+    
+    VectorXd y = z - H_ * x_;
+    MatrixXd S = H_ * P_ * H_trans + R_;
+    MatrixXd K = P_ * H_trans * S.inverse();
+    
+    x_ = x_ + (K * y);
+    long x_size = x_.size();
+    MatrixXd I = MatrixXd::Identity(x_size, x_size);
+    P_ = (I - K * H_) * P_trans;
 }
 
 void KalmanFilter::UpdateEKF(const VectorXd &z) {
   /**
    * TODO: update the state by using Extended Kalman Filter equations
    */
+    
 }

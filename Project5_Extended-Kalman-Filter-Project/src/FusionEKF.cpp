@@ -14,7 +14,7 @@ using std::vector;
  */
 FusionEKF::FusionEKF() {
   is_initialized_ = false;
-
+  
   previous_timestamp_ = 0;
 
   // initializing matrices
@@ -36,8 +36,31 @@ FusionEKF::FusionEKF() {
    * TODO: Finish initializing the FusionEKF.
    * TODO: Set the process and measurement noises
    */
-
-
+    x_ = MatrixXd(4);
+    
+    F_ = MatrixXd(4,4);
+    F_ << 1, 0, 1, 0,
+          0, 1, 0, 1,
+          1, 0, 1, 0,
+          0, 1, 0, 1;
+    
+    P_ = MatrixXd(4,4);
+    P_ << 1, 0, 0, 0,
+          0, 1, 0, 0,
+          0, 0, 100, 0,
+          0, 0, 0, 100;
+    
+    H_laser_ << 1, 0, 0, 0,
+                0, 1, 0, 0;
+    
+        
+    Q_ = MatrixXd(4,4);
+    Q_ << 1, 0, 0, 0,
+          0, 1, 0, 0,
+          0, 0, 1, 0,
+          0, 0, 0, 1;
+        
+    Hj_ = CalculateJacobian(x_);
 }
 
 /**
@@ -55,6 +78,7 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
      * TODO: Create the covariance matrix.
      * You'll need to convert radar from polar to cartesian coordinates.
      */
+    
 
     // first measurement
     cout << "EKF: " << endl;
