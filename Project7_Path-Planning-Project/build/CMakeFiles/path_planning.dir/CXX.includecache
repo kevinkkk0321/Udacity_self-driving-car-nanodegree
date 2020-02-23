@@ -855,6 +855,18 @@ helpers.h
 /Users/kevin/Desktop/Udacity_self-driving-car-nanodegree/Project7_Path-Planning-Project/src/helpers.h
 json.hpp
 /Users/kevin/Desktop/Udacity_self-driving-car-nanodegree/Project7_Path-Planning-Project/src/json.hpp
+spline.h
+/Users/kevin/Desktop/Udacity_self-driving-car-nanodegree/Project7_Path-Planning-Project/src/spline.h
+
+/Users/kevin/Desktop/Udacity_self-driving-car-nanodegree/Project7_Path-Planning-Project/src/spline.h
+cstdio
+-
+cassert
+-
+vector
+-
+algorithm
+-
 
 /usr/local/include/uWS/Extensions.h
 string
