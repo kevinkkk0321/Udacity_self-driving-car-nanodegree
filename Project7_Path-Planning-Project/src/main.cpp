@@ -59,7 +59,7 @@ int main() {
   // define target velocity in m/s
   double ref_vel = 0;
 
-  const double MAX_SPEED = 49.5; // Speed limit
+  const double MAX_SPEED = 49.0; // Speed limit
   const double MAX_ACC = 0.224; // Max acceleration
     
   h.onMessage([&ref_vel, &map_waypoints_x,&map_waypoints_y,&map_waypoints_s,
@@ -113,36 +113,70 @@ int main() {
             {
                 car_s = end_path_s;
             }
-            bool too_close = false;
+            
+            bool decrease_speed = false;
+            bool target_front = false;
+            bool target_left = false;
+            bool target_right = false;
             
             for (int i=0; i<sensor_fusion.size(); i++) {
                 // Sensor fusion i got the ith car information
                 float d = sensor_fusion[i][6];
-                if (d<(2+4*lane+2) && d>(2+4*lane-2)) {
-                    double vx = sensor_fusion[i][3];
-                    double vy = sensor_fusion[i][4];
-                    double check_speed = sqrt(vx*vx+vy+vy);
-                    double check_car_s = sensor_fusion[i][5];
-                    
-                    check_car_s+=((double)prev_size*.02*check_speed);
-                    if ((check_car_s > car_s) && (check_car_s - car_s<30)) {
-                        too_close = true;
-                        
-                        //check which lane is safe to change lane
-                        
-                        if (lane > 0) {
-                            lane--;
-                        }
-                        else
-                            lane++;
+                
+                int target_lane = calc_target_lane(d);
+                if(target_lane < 0)
+                    continue;
+                
+                double vx = sensor_fusion[i][3];
+                double vy = sensor_fusion[i][4];
+                double target_car_speed = sqrt(vx*vx+vy*vy);
+                double target_car_s = sensor_fusion[i][5];
+                
+                target_car_s+=((double)prev_size*.02*target_car_speed);
+                
+                if (target_lane == lane) {
+                    if (target_car_s > car_s && (target_car_s - car_s)<30) {
+                        target_front = true;
                     }
                 }
-                
-                
-                
+                else if (target_lane - lane == -1){
+                    if ( (car_s - 20)<target_car_s  && (car_s + 30)>target_car_s ) {
+                        target_left = true;
+                    }
+                }
+                else if (target_lane - lane == 1){
+                    if ( (car_s - 20)<target_car_s  && (car_s + 30)>target_car_s ) {
+                        target_right = true;
+                    }
+                }
             }
             
-            if (too_close) {
+            if(target_front)
+            {
+                if (!target_left && lane > 0) {
+                    lane--;
+                }
+                else if (!target_right && lane < 2) {
+                    lane++;
+                }
+                else{
+                    decrease_speed = true;
+                }
+            }
+            else
+            {
+                if (lane != 1) {
+                    if (lane == 0 && !target_right || lane==2 && !target_left) {
+                        lane = 1;
+                    }
+                }
+            }
+            
+            
+            
+            
+            
+            if (decrease_speed) {
                 ref_vel -= MAX_ACC;
             }
             else if(ref_vel < MAX_SPEED){
