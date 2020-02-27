@@ -26,9 +26,9 @@ The code compiles without any errors.
 
 #### Reflection
 The trajectory generation in this project has been performed by:
-* Analysing other vehicles (a.k.a targets) on the highway around (front, left, right) ego vehicle (lines 288 - 336).
+* Analysing other vehicles (a.k.a targets) on the highway around (front, left, right) ego vehicle.
 
-* Planning appropriate safe behavior (keep lane, lane change left or lane change right; lines 338 - 375).
+* Planning appropriate safe behavior (keep lane, lane change left or lane change right).
 
 * Generating waypoints and fitting a spline through those waypoints for a jerk free and smooth trajectory. Waypoints and curve fitting is discussed in detail below.
 
@@ -44,5 +44,5 @@ An open source spline library (reference: https://github.com/ttk592/spline/) is 
 The fitted curve is then used to generate equally spaced points (depending upon the commanded  reference velocity for current cycle) in car's frame of reference. Finally, these points are pushed on to vector of x/y values before transforming them back into inertial frame of reference .
 
 Note:
-* Before points from spline are pushed, previous path points are pushed to ensure continuity (lines 461 - 465).
+* Before points from spline are pushed, previous path points are pushed to ensure continuity .
 * Speed is regulated cycle to cycle.
