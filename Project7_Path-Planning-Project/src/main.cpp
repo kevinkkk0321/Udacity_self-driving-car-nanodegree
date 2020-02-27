@@ -140,12 +140,12 @@ int main() {
                     }
                 }
                 else if (target_lane - lane == -1){
-                    if ( (car_s - 20)<target_car_s  && (car_s + 30)>target_car_s ) {
+                    if ( (car_s - 25)<target_car_s  && (car_s + 30)>target_car_s ) {
                         target_left = true;
                     }
                 }
                 else if (target_lane - lane == 1){
-                    if ( (car_s - 20)<target_car_s  && (car_s + 30)>target_car_s ) {
+                    if ( (car_s - 25)<target_car_s  && (car_s + 30)>target_car_s ) {
                         target_right = true;
                     }
                 }
@@ -166,7 +166,7 @@ int main() {
             else
             {
                 if (lane != 1) {
-                    if (lane == 0 && !target_right || lane==2 && !target_left) {
+                    if ((lane == 0 && !target_right) || (lane==2 && !target_left)) {
                         lane = 1;
                     }
                 }
