@@ -20,7 +20,7 @@ The code compiles without any errors.
 * The car stays in its lane, except for the time between changing lanes.
 * The car is able to change lanes.
 
-#### Project lane changing screenshot image
+#### Path-Planning-Project image
 ![alt text][image1]
 
 
