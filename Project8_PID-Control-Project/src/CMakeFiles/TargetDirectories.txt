@@ -1,3 +1,0 @@
-/Users/kevin/Desktop/Udacity_self-driving-car-nanodegree/Project8_PID-Control-Project/src/CMakeFiles/rebuild_cache.dir
-/Users/kevin/Desktop/Udacity_self-driving-car-nanodegree/Project8_PID-Control-Project/src/CMakeFiles/edit_cache.dir
-/Users/kevin/Desktop/Udacity_self-driving-car-nanodegree/Project8_PID-Control-Project/src/CMakeFiles/pid.dir
