@@ -39,4 +39,5 @@ Tips for setting up your environment can be found [here](https://classroom.udaci
 
 ## Final hyperparameters (P, I, D coefficients)
 I chose the hyperparameters by manual tuning, set the hyparameters as Kp = 0.2, Ki = 0.001, Kd = 8
+
 With the hyperparameters setting, the car would drive more smoothly inside the road, and able to get back to the center of the road every time while it driving.
