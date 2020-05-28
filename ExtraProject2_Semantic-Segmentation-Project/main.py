@@ -138,7 +138,11 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
         print('epoch : %d'  % epoch)
         for image, label in get_batches_fn(batch_size):
 <<<<<<< HEAD
+<<<<<<< HEAD
             _, loss = sess.run([train_op, cross_entropy_loss],
+=======
+            _, batch_cost = sess.run([train_op, cross_entropy_loss],
+>>>>>>> 21b89813ed9322ff1549e5b385e94fe683a03ae5
 =======
             _, batch_cost = sess.run([train_op, cross_entropy_loss],
 >>>>>>> 21b89813ed9322ff1549e5b385e94fe683a03ae5
@@ -152,6 +156,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
             num_batch += 1
             if num_batch % 10 == 0:
 <<<<<<< HEAD
+<<<<<<< HEAD
                 print('loss %.9f' % loss)
 
         avg_loss = sum_loss / num_batch
@@ -160,6 +165,8 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
         #if saver is not None:
         #    saver.save(sess, './saved_model/checkpoint', global_step=(epoch+1))
 =======
+=======
+>>>>>>> 21b89813ed9322ff1549e5b385e94fe683a03ae5
                 print('loss %.9f' % batch_cost)
 
         avg_loss = sum_loss / num_batch
@@ -167,6 +174,9 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
         print('Saver: %s' % saver)
         if saver is not None:
             saver.save(sess, './saved_model/checkpoint', global_step=(epoch+1))
+<<<<<<< HEAD
+>>>>>>> 21b89813ed9322ff1549e5b385e94fe683a03ae5
+=======
 >>>>>>> 21b89813ed9322ff1549e5b385e94fe683a03ae5
 
 
