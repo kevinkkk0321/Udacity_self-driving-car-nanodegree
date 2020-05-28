@@ -25,7 +25,7 @@ def load_vgg(sess, vgg_path):
     :param vgg_path: Path to vgg folder, containing "variables/" and "saved_model.pb"
     :return: Tuple of Tensors from VGG model (image_input, keep_prob, layer3_out, layer4_out, layer7_out)
     """
-    # TODO: Implement function
+    # Implement function
     #   Use tf.saved_model.loader.load to load the model and weights
     vgg_tag = 'vgg16'
     vgg_input_tensor_name = 'image_input:0'
@@ -55,7 +55,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
     :param num_classes: Number of classes to classify
     :return: The Tensor for the last layer of output
     """
-    # TODO: Implement function
+    # Implement function
     # layer 7 1x1
     layer_7_conv_1x1 = tf.layers.conv2d(
 		vgg_layer7_out, num_classes, 1, padding='same',
@@ -101,7 +101,7 @@ def optimize(nn_last_layer, correct_label, learning_rate, num_classes):
     :param num_classes: Number of classes to classify
     :return: Tuple of (logits, train_op, cross_entropy_loss)
     """
-    # TODO: Implement function
+    # Implement function
     logits = tf.reshape(nn_last_layer, (-1, num_classes))
     cross_entropy_loss = tf.reduce_mean(
                         tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=correct_label))
@@ -127,7 +127,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
     :param keep_prob: TF Placeholder for dropout keep probability
     :param learning_rate: TF Placeholder for learning rate
     """
-    # TODO: Implement function
+    # Implement function
     sess.run(tf.global_variables_initializer())
     for epoch in range(epochs):
         sum_loss = 0
@@ -137,7 +137,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
 
         print('epoch : %d'  % epoch)
         for image, label in get_batches_fn(batch_size):
-            _, loss = sess.run([train_op, cross_entropy_loss],
+            _, batch_cost = sess.run([train_op, cross_entropy_loss],
                     feed_dict={
                     input_image: image,
                     correct_label: label,
@@ -146,9 +146,15 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
                     })
             sum_loss += loss
             num_batch += 1
-        average_loss = sum_loss/num_batch
+            if num_batch % 10 == 0:
+                print('loss %.9f' % batch_cost)
 
-        print("average loss: %d" %average_loss )
+        avg_loss = sum_loss / num_batch
+        print('Epoch: %04d, average loss=%.9f' % ((epoch+1), avg_loss))
+        print('Saver: %s' % saver)
+        if saver is not None:
+            saver.save(sess, './saved_model/checkpoint', global_step=(epoch+1))
+
 
 tests.test_train_nn(train_nn)
 
