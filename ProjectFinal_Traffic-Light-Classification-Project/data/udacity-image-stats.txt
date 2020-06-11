@@ -1,0 +1,2 @@
+Udacity testarea: 155 samples, 1368x1096
+Udacity simulator: 917 samples (without images from "Unknown" folder), 800x600
