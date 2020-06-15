@@ -14,14 +14,14 @@ The goals/steps of this project are the following:
 
 Install tensorflow object detection api on AWS instance
 
-1. Clone tensorflow project
+###### 1. Clone tensorflow project
 ```
 $ git clone https://github.com/tensorflow/models.git
 $ cd models 
 $ git checkout f7e99c0
 ```
 
-2. Install tensorflow-gpu and other settings
+###### 2. Install tensorflow-gpu and other settings
     sudo apt-get update
 ```
 pip install tensorflow-gpu==1.4
@@ -31,20 +31,20 @@ protoc object_detection/protos/*.proto --python_out=.
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 
-3. Sometimes occur errors
+###### 3. Sometimes occur errors
 ```
 E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)
 E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?
 ```
-I'll reboot the instance and problem solved
+ I'll reboot the instance and problem solved
 
-4. Run model_builder_test test if tensorflow correctly installed
+###### 4. Run model_builder_test test if tensorflow correctly installed
 ```
 python object_detection/builders/model_builder_test.py
 ```
-if no error means tensorflow correctly installed
+ if no error means tensorflow correctly installed
 
-5. Put this project on AWS，run following command and start training
+###### 5. Put this project on AWS，run following command and start training
 ```
 $ python train.py --logtostderr --train_dir=./models/train --pipeline_config_path=./config/ssd_inception_v2_coco_sim.config
 ```
