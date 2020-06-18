@@ -23,6 +23,7 @@ Final Project: [Capstone-Project](https://github.com/kevinkkk08/Udacity_self-dri
 
 Final Project: [Traffic-Light-Classification-Project](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/ProjectFinal_Traffic-Light-Classification-Project)
 
+-----------------------
 
 ExtraProject 1: [Vehicle-Detection](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/ExtraProject1_Vehicle-Detection-Project)
 
