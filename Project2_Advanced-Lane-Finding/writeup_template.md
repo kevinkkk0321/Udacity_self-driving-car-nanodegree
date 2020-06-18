@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [image4]: ./output_images/before_Perspective.jpg "before_Perspective"
 [image5]: ./output_images/after_Perspective.jpg "after_Perspective"
 [image6]: ./output_images/screenshot.png "Output"
-[image7]: ./output_images/binary_image6.png "binary_image"
+[image7]: ./output_images/binary_image6.jpg "binary_image"
 [video1]: ./output_images/project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
