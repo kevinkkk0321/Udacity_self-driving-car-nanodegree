@@ -20,6 +20,7 @@ Project 7: [Path-Planning](https://github.com/kevinkkk08/Udacity_self-driving-ca
 Project 8: [PID-Control](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/Project8_PID-Control-Project)
 
 Final Project: [Capstone-Project](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/ProjectFinal_Capstone-Project)
+
 Final Project: [Traffic-Light-Classification-Project](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/ProjectFinal_Traffic-Light-Classification-Project)
 
 
