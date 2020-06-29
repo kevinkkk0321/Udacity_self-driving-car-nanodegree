@@ -2,6 +2,8 @@
 
 [Udacity's Self-Driving Car Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013?cjevent=f1d2aaafa3e011e9831a019f0a180510) 10/25, 2019 ~ 4/25, 2020
 
+Following links are my own blog's link of the projects on Medium 
+
 
 #### Project 1: [Finding-Lane-Lines](https://medium.com/chiukevin0321/%E8%87%AA%E9%A7%95%E8%BB%8A-project-1-2-e1a8291b72b1)
 
