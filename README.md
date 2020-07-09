@@ -9,11 +9,11 @@ Following links are my own blog's link of the projects on Medium
 
 #### Project 2: [Advanced-Lane-Finding](https://medium.com/chiukevin0321/%E8%87%AA%E9%A7%95%E8%BB%8A-project-1-2-e1a8291b72b1)
 
-#### Project 3: [Traffic-Sign-Classifier](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/Project3_Traffic-Sign-Classifier)
+#### Project 3: [Traffic-Sign-Classifier](https://medium.com/chiukevin0321/udacity-%E8%87%AA%E9%A7%95%E8%BB%8A-project-3-f48ca31dc578)
 
-#### Project 4: [Behavioral-Cloning](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/Project4_Behavioral-Cloning)
+#### Project 4: [Behavioral-Cloning](https://medium.com/chiukevin0321/udacity-%E8%87%AA%E9%A7%95%E8%BB%8A-project-4-9889f52c58c3)
 
-#### Project 5: [Extended-Kalman-Filter](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/Project5_Extended-Kalman-Filter-Project)
+#### Project 5: [Extended-Kalman-Filter](https://medium.com/chiukevin0321/udacity-%E8%87%AA%E9%A7%95%E8%BB%8A-project-5-d7a1242413de)
 
 #### Project 6: [Kidnapped-Vehicle](https://github.com/kevinkkk08/Udacity_self-driving-car-nanodegree/tree/master/Project6_Kidnapped-Vehicle-Project)
 
