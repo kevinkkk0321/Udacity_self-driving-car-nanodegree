@@ -7,7 +7,7 @@ In this project, I used computer vision techniques like edge detection, perspect
 
 The Project
 ---
-* Project report in [writeup_report.md](./writeup_template.md)
+* Project report in [writeup_report.md](./writeup_template.md) 
 * Video pipeline source code in [P2.ipynb](./P2.ipynb)
 
 Result 
